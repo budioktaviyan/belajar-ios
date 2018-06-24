@@ -70,4 +70,4 @@ fastlane/test_output
 
 # Other
 .DS_Store
-HelloiOS.xcworkspace/
+HelloiOS.xcodeproj/project.xcworkspace/xcshareddata
