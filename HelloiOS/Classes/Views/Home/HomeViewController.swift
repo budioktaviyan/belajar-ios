@@ -3,22 +3,16 @@ import UIKit
 class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         self.title = "Home"
         self.navigationItem.backBarButtonItem = UIBarButtonItem(
-            title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil
+            title: nil,
+            style: UIBarButtonItemStyle.plain,
+            target: nil,
+            action: nil
         )
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     @IBAction func goToDetail() {
-        let detailVC = DetailViewController(nibName: "DetailViewController", bundle: nil)
-        self.navigationController?.pushViewController(detailVC, animated: true)
+        AppRouter.sharedInstance.presentView(viewController: DetailViewController())
     }
 }
